@@ -90,7 +90,7 @@ module.exports = function create (opts) {
       menubar.positioner = new Positioner(menubar.window)
 
       menubar.window.on('blur', function () {
-          if(opts.blurDelay !== 0){
+          if(opts.blurDelay === 0){
               opts.alwaysOnTop ? emitBlur() : hideWindow()
           }else{
               setTimeout( function(){
